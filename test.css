@@ -1,0 +1,14 @@
+onTranslated: function(event) {
+  var carousel = $('.carousel1');
+  var itemCount = carousel.find('.owl-item').length;
+  var currentIndex = event.item.index;
+  
+  // Kiểm tra xem carousel đã đến vị trí cuối cùng chưa
+  if (currentIndex === itemCount - 1) {
+      // Loại bỏ lớp CSS để ẩn hiệu ứng "fadeInDown"
+      carousel.find('.wow').removeClass('fadeInDown');
+  } else {
+      // Thêm lại lớp CSS để hiển thị hiệu ứng "fadeInDown"
+      carousel.find('.wow').addClass('fadeInDown');
+  }
+}
